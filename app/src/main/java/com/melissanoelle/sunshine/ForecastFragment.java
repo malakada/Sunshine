@@ -55,6 +55,8 @@ public class ForecastFragment extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_refresh) {
+            FetchWeatherTask weatherTask = new FetchWeatherTask();
+            weatherTask.execute("http://api.openweathermap.org/data/2.5/forecast/daily?q=85225&mode=json&units=metric&cnt=7");
             return true;
         }
 
@@ -88,8 +90,6 @@ public class ForecastFragment extends Fragment {
 
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
-
-//        new FetchWeatherTask().execute("http://api.openweathermap.org/data/2.5/forecast/daily?q=85225&mode=json&units=metric&cnt=7");
 
         return rootView;
     }
