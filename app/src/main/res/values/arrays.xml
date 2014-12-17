@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="temperature_preference">
+        <item name="C">Metric</item>
+        <item name="F">Imperial</item>
+    </string-array>
+    <string-array name="temperature_preference_values">
+        <item name="C">C</item>
+        <item name="F">F</item>
+    </string-array>
+</resources>
