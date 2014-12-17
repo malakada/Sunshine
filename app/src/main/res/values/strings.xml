@@ -11,5 +11,9 @@
     <string name="pref_location_default" translatable="false">85225</string>
     <string name="pref_temperature_label">Temperature Settings</string>
     <string name="pref_temperature_key">temperature</string>
+    <string name="pref_metric_label">Metric</string>
+    <string name="pref_imperial_label">Imperial</string>
+    <string name="pref_metric_value">C</string>
+    <string name="pref_imperial_value">F</string>
 
 </resources>

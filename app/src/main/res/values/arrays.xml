@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="temperature_preference">
-        <item name="C">Metric</item>
-        <item name="F">Imperial</item>
+        <item>@string/pref_metric_label</item>
+        <item>@string/pref_imperial_label</item>
     </string-array>
     <string-array name="temperature_preference_values">
-        <item name="C">C</item>
-        <item name="F">F</item>
+        <item>@string/pref_metric_value</item>
+        <item>@string/pref_imperial_value</item>
     </string-array>
 </resources>

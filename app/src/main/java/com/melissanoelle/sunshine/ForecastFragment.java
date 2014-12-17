@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.melissanoelle.sunshine.R;
 
@@ -134,6 +133,19 @@ public class ForecastFragment extends Fragment {
          * Prepare the weather high/lows for presentation.
          */
         private String formatHighLows(double high, double low) {
+            // Determine if we need to convert to F from C.
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String temperature_preference = preferences.getString(getString(R.string.pref_temperature_key),
+                    getString(R.string.pref_metric_value));
+            if (temperature_preference.equals(getString(R.string.pref_imperial_value))) {
+                high = convertCtoF(high);
+                low = convertCtoF(low);
+                Log.v("sunshine_prefs", "converting to f");
+            } else {
+                Log.v("sunshine_prefs", "not converting to f");
+                Log.v("sunshine_prefs", temperature_preference);
+            }
+
             // For presentation, assume the user doesn't care about tenths of a degree.
             long roundedHigh = Math.round(high);
             long roundedLow = Math.round(low);
@@ -195,6 +207,10 @@ public class ForecastFragment extends Fragment {
             }
 
             return resultStrs;
+        }
+
+        public double convertCtoF(double celsius) {
+            return ((9/5) * celsius) + 32.0;
         }
 
         @Override
