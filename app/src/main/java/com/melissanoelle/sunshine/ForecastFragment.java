@@ -140,10 +140,6 @@ public class ForecastFragment extends Fragment {
             if (temperature_preference.equals(getString(R.string.pref_imperial_value))) {
                 high = convertCtoF(high);
                 low = convertCtoF(low);
-                Log.v("sunshine_prefs", "converting to f");
-            } else {
-                Log.v("sunshine_prefs", "not converting to f");
-                Log.v("sunshine_prefs", temperature_preference);
             }
 
             // For presentation, assume the user doesn't care about tenths of a degree.

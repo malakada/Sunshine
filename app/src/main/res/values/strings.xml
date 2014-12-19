@@ -15,5 +15,6 @@
     <string name="pref_imperial_label">Imperial</string>
     <string name="pref_metric_value">C</string>
     <string name="pref_imperial_value">F</string>
+    <string name="action_view_on_map">View Location on Map</string>
 
 </resources>

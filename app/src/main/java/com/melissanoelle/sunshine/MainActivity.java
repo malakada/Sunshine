@@ -1,6 +1,9 @@
 package com.melissanoelle.sunshine;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -56,10 +59,25 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
+        } else if (id == R.id.view_map) {
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            String location_preference = preferences.getString(getString(R.string.pref_location_key), "85225");
+
+            Uri location = Uri.parse("geo:0,0").buildUpon()
+                    .appendQueryParameter("q", location_preference).build();
+
+            showMap(location);
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    public void showMap(Uri geoLocation) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 
 }
