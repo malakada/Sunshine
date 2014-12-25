@@ -3,6 +3,7 @@ package com.melissanoelle.sunshine;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.PersistableBundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
@@ -80,4 +81,39 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v("sunshine_life", "onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v("sunshine_life", "onPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v("sunshine_life", "onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v("sunshine_life", "onStop");
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
+        super.onCreate(savedInstanceState, persistentState);
+        Log.v("sunshine_life", "onCreate");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v("sunshine_life", "onDestroy");
+    }
 }
