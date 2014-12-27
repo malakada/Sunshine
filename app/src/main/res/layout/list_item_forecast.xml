@@ -17,7 +17,7 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:text="@string/list_view_dash_separator" />
+    android:text="@string/view_dash_separator" />
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:text="@string/list_view_dash_separator" />
+    android:text="@string/view_dash_separator" />
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:text="@string/list_view_slash_separator" />
+    android:text="@string/view_slash_separator" />
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"

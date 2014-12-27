@@ -24,7 +24,7 @@
     <string name="action_view_on_map">View Location on Map</string>
     <string name="detail_share">Share</string>
 
-    <string name="list_view_dash_separator">\u0020-\u0020</string>
-    <string name="list_view_slash_separator">/</string>
+    <string name="view_dash_separator">\u0020-\u0020</string>
+    <string name="view_slash_separator">/</string>
 
 </resources>
